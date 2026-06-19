@@ -1,32 +1,43 @@
 let empleados = [];
+// Guardamos acá la lista de empleados que vamos a cargar desde el archivo CSV
 
 let estado = "LEGAJO";
+// Esta variable indica en qué parte del proceso se encuentra el usuario
 
 let emp = null;
+// Acá guardamos los datos del empleado encontrado
 
 let fecha = "";
 let dias = "";
+// Guardamos la fecha y la cantidad de días solicitados por el usuario
 
 let modificando = false;
+// Indica si el usuario está modificando unas vacaciones ya existentes
 
 
 
 fetch("empleados.csv")
 .then(r => r.text())
 .then(t => {
+    // En esta parte leemos el archivo CSV con los datos de empleados
 
     const filas = t.trim().split("\n");
+    // Separamos cada línea del archivo para poder leer los empleados
 
     const headers = filas[0].split(",");
+    // Tomamos los nombres de las columnas del archivo
 
 
     for(let i=1;i<filas.length;i++){
+        // Recorremos cada empleado del archivo
 
         const valores = filas[i].split(",");
 
         let obj={};
+        // Creamos un objeto con la información de cada empleado
 
         headers.forEach((h,j)=>{
+            // Asociamos cada dato con su nombre de columna
 
             obj[h.trim()] = valores[j]?.trim();
 
@@ -34,6 +45,7 @@ fetch("empleados.csv")
 
 
         empleados.push(obj);
+        // Guardamos el empleado dentro de la lista general
 
     }
 
@@ -49,6 +61,7 @@ fetch("empleados.csv")
 
 
 const estados = {
+    // Definimos todos los pasos posibles del proceso
 
     LEGAJO:"Esperando legajo",
 
@@ -71,6 +84,7 @@ const estados = {
 
 
 function draw(){
+    // Esta función muestra visualmente el estado actual del proceso
 
     states.innerHTML="";
 
@@ -113,6 +127,7 @@ function draw(){
 
 
 draw();
+// Mostramos el estado inicial del sistema
 
 
 
@@ -143,9 +158,11 @@ function add(text, clase){
 
 
 function mostrarEmpleado(){
+    // Esta función muestra la información del empleado encontrado
 
 
     if(!emp){
+        // Si no hay empleado mostramos que no está identificado
 
         document.getElementById("emp").innerHTML="Sin identificar";
 
@@ -181,6 +198,7 @@ function mostrarEmpleado(){
 
 
 function validarFecha(f){
+    // Esta función controla que la fecha ingresada sea correcta
 
 
     let partes=f.split("-");
@@ -219,6 +237,7 @@ function validarFecha(f){
 
 
 function reiniciar(){
+    // Esta función vuelve el chatbot al inicio del proceso
 
 
     estado="LEGAJO";
@@ -263,6 +282,7 @@ function reiniciar(){
 
 function enviarRRHH(callback){
 
+    // En esta función simulamos el envío de la solicitud al área de RRHH
 
     estado="RRHH";
 
@@ -282,6 +302,7 @@ function enviarRRHH(callback){
 
     setTimeout(()=>{
 
+        // Simulamos una espera hasta recibir la respuesta de RRHH
 
         add(
 
@@ -294,6 +315,7 @@ function enviarRRHH(callback){
 
         callback();
 
+        // Luego de la respuesta continuamos con el siguiente paso del proceso
 
 
     },5000);
@@ -310,6 +332,7 @@ function enviarRRHH(callback){
 
 function send(){
 
+    // Esta función procesa todo lo que escribe el usuario en el chat
 
 
     let texto=txt.value.trim();
@@ -871,6 +894,7 @@ Disfrute sus vacaciones.`,
 
 
         else{
+            // Si escribe algo distinto de SI o NO pide nuevamente la respuesta
 
 
             add(
