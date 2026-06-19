@@ -1,0 +1,21 @@
+legajo,nombre,apellido,puesto,saldo_dias,estado,vacaciones_programadas
+1001,Juan,Perez,Analista,20,Activo,15-05-2026
+1002,Ana,Gomez,Ingeniera,25,Activo,
+1003,Carlos,Lopez,Supervisor,30,Activo,10-08-2026
+1004,Lucia,Martinez,Administrativa,15,Activo,
+1005,Diego,Fernandez,Operario,20,Activo,01-12-2026
+1006,Mariana,Rodriguez,Analista,18,Activo,
+1007,Pablo,Sanchez,Programador,25,Activo,20-07-2026
+1008,Sofia,Ramirez,Contadora,22,Activo,
+1009,Miguel,Torres,Supervisor,30,Activo,05-09-2026
+1010,Carla,Diaz,Recursos Humanos,15,Activo,
+1011,Federico,Romero,Tecnico,20,Activo,18-11-2026
+1012,Valentina,Acosta,Diseñadora,25,Activo,
+1013,Rodrigo,Castro,Ingeniero,30,Activo,03-06-2026
+1014,Florencia,Silva,Administrativa,18,Activo,
+1015,Martin,Ortiz,Operario,20,Activo,22-10-2026
+1016,Camila,Medina,Analista,25,Activo,
+1017,Nicolas,Herrera,Supervisor,30,Activo,12-01-2027
+1018,Julieta,Rojas,Secretaria,15,Activo,
+1019,Agustin,Vega,Programador,20,Activo,25-03-2027
+1020,Paula,Molina,Ingeniera,28,Activo,

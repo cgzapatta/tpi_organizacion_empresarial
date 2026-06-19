@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chatbot Vacaciones</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="wrap">
+
+    <div class="panel">
+
+        <h3>Datos del Empleado</h3>
+
+        <div id="emp">
+            Sin identificar
+        </div>
+
+        <hr>
+
+        <div>
+            <b>Operación:</b><br>
+            <span id="op">-</span>
+        </div>
+
+    </div>
+
+
+    <div id="chatbox">
+
+        <div id="head">
+            Solicitud de Vacaciones
+        </div>
+
+
+        <div id="chat"></div>
+
+
+        <div id="inputArea">
+
+            <input 
+                id="txt" 
+                placeholder="Escriba aquí..."
+            >
+
+            <button onclick="send()">
+                Enviar
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="panel">
+
+        <h3>Monitor de Estados</h3>
+
+        <div id="states"></div>
+
+    </div>
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
