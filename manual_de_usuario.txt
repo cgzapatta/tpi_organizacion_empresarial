@@ -1,0 +1,35 @@
+MANUAL DE USUARIO - CHATBOT DE GESTIÓN DE VACACIONES
+
+El chatbot permite realizar una solicitud de vacaciones de forma rápida y sencilla, guiando al usuario durante todo el proceso. Para utilizarlo correctamente se deben seguir los siguientes pasos:
+
+1. Ingreso al chatbot
+Al iniciar la conversación, el sistema solicitará el número de legajo del empleado. Ingrese su legajo correctamente para que el sistema pueda consultar sus datos.
+
+2. Validación de datos
+El chatbot verificará la información del empleado y mostrará los datos encontrados. Si el legajo ingresado no es correcto, deberá volver a ingresarlo.
+
+3. Solicitud de vacaciones
+Si el empleado no posee vacaciones cargadas, el sistema solicitará ingresar la fecha de inicio de las vacaciones con el formato indicado:
+
+Ejemplo: 15-05-2026
+
+Luego deberá ingresar la cantidad de días que desea solicitar.
+
+4. Modificación de vacaciones existentes
+Si el sistema detecta que ya existen vacaciones programadas, consultará si desea modificarlas. En caso afirmativo, la solicitud será enviada a Recursos Humanos para su revisión y luego podrá continuar con la carga de una nueva fecha.
+
+5. Validación de la solicitud
+El sistema verificará que la cantidad de días solicitada no supere el saldo disponible del empleado.
+
+Si la solicitud supera los 15 días, será enviada a Recursos Humanos para una validación adicional antes de continuar.
+
+6. Confirmación final
+Antes de finalizar, el chatbot mostrará un resumen de la solicitud con la fecha y cantidad de días seleccionados. El usuario deberá responder:
+
+SI para confirmar la solicitud.
+NO para cancelar la solicitud.
+
+7. Finalización del proceso
+Una vez confirmada la solicitud, el sistema registrará la operación y generará un número de solicitud como comprobante.
+
+En caso de querer realizar una nueva solicitud, se puede utilizar la opción REINICIAR para comenzar nuevamente el proceso.
